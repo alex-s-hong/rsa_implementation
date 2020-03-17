@@ -2,3 +2,4 @@
 *.zip
 /SampleOutputs
 /.idea
+.DS_Store
