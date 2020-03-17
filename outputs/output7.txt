@@ -1,12 +1,13 @@
-line:133
-b_5|11001011111001011001010001011100|0
-b_4|11001111101111000111101101010111|1
-b_3|10111110111001111010101000010100|0
-b_2|10101011011100111110111100101110|0
-b_1|11011011100010000001011010110001|1
-Number|83|00000000000000000000000001010011
+Random Number Generation, pick each bit by random and concatenation.
+b_5|11110011010110010011010100011101|1
+b_4|10011011111001111110100111001110|0
+b_3|10110001001011000111111101011001|1
+b_2|11001110001001110100001001000100|0
+b_1|10000111111010011000010111011000|0
+Number|105|00000000000000000000000001101001
 
-line:149
+Miller-Rabin Algorithm for testing whether given number is prime or not.
+Case 1. Non-prime number given.
 n = 77, a = 3
 i |xi |z   |y   |y
 6 |1  |1   |1   |3
@@ -18,19 +19,19 @@ i |xi |z   |y   |y
 0 |0  |16  |25  |25
 77 is not a prime because 3^76 mod 77 != 1
 
-line:155
-n = 109, a = 84
+Case 2. Prime number given.
+n = 109, a = 104
 i |xi |z   |y   |y
-6 |1  |1   |1   |84
-5 |1  |84  |80  |71
-4 |0  |71  |27  |27
-3 |1  |27  |75  |87
-2 |1  |87  |48  |108
+6 |1  |1   |1   |104
+5 |1  |104 |25  |93
+4 |0  |93  |38  |38
+3 |1  |38  |27  |83
+2 |1  |83  |22  |108
 1 |0  |108 |1   |1
 0 |0  |1   |1   |1
 109 is perhaps a prime
 
-line:174
+Get public key e which conforms to be relatively prime with Φ(n) by using Extended Euclidean Algorithm.
 e =  3
 i |qi     |r      |ri+1   |ri+2   |si    |ti
 1 |3600   |10800  |3      |0      |1     |0
@@ -54,10 +55,10 @@ i |qi     |r      |ri+1   |ri+2   |si    |ti
 3 |6      |6      |1      |0      |1     |-1542
 4 |       |1      |       |       |-1    |1543
 
-line:186
+Getting d, also by Extended Euclidean Algorithm.
 d = 1543
 
-line:190
+Alice's public key, private key, and sources for them.
 p = 109, q = 101, n = 11009, e = 7, d = 1543
 p = 00000000000000000000000001101101
 q = 00000000000000000000000001100101
@@ -65,33 +66,39 @@ n = 00000000000000000010101100000001
 e = 00000000000000000000000000000111
 d = 00000000000000000000011000000111
 
-line:198
-p = 113, q = 101, n = 11413, e = 3, d = 7467
-p = 00000000000000000000000001110001
-q = 00000000000000000000000001100101
-n = 00000000000000000010110010010101
-e = 00000000000000000000000000000011
-d = 00000000000000000001110100101011
+Trent's public key, private key, and sources for them.
+p = 79, q = 83, n = 6557, e = 5, d = 5117
+p = 00000000000000000000000001001111
+q = 00000000000000000000000001010011
+n = 00000000000000000001100110011101
+e = 00000000000000000000000000000101
+d = 00000000000000000001001111111101
 
-line:222
+r is concatenation of 1. the string of Alice, 2. n padded with leading 0, 3. Alice's public key e.
 r = 0010000001000001011011000110100101100011011001010000000000000000001010110000000100000000000000000000000000000111
-h(r) = 00000000000000000000000001001111
-s = 00000000000000000001110011000100
 
-line:224
-h(r) = 79, s = 7364
+h is the one-way hash function.
+h(r) = 00000000000000000000000001001111
+
+The signature s is h(r) decrypted with Trent’s private key (using fast exponentiation).
+s = 00000000000000000000101100011100
+
+Decimal representation.
+h(r) = 79, s = 2844
 
 line:246
-k = 13, u = 7133
+Alice's authentication to Bob.
+k is binary representation of u, u is random number between 4096 and 8191.
+k = 13, u = 4630
 
-line:248
-u = 00000000000000000001101111011101
+Binary representation of u.
+u = 00000000000000000001001000010110
 
-line:254
-u = 7133, h(u) = 198, v = 9471, Ev = 198
+u, h(u), v = D^RSA(d, h(u)), E^RSA(e, v)
+u = 4630, h(u) = 4, v = 10426, Ev = 4
 
-line:257
+Computation of E(e,v).
 i |xi |y     |y
-2 |1  |1     |9471
-1 |1  |9518  |3286
-0 |1  |8976  |198
+2 |1  |1     |10426
+1 |1  |9619  |6713
+0 |1  |4532  |4

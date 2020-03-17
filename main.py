@@ -4,7 +4,7 @@ This version has been submitted to Himani Shah directly as NYU Classes does not 
 """
 
 import random
-
+import sys
 
 # line 133
 def line133_generator(num, printing=False):
@@ -25,7 +25,8 @@ def n_generator(printing=False):
     return int(binary, 2)
 
 
-print("line:133")
+#print("line:133")
+print("Random Number Generation, pick each bit by random and concatenation.")
 n_generator(printing=True)
 print()
 
@@ -108,14 +109,17 @@ def get_prime(want_prime=True) -> (int, int):
 
 
 # print line 149: non prime
-print("line:149")
+#print("line:149")
+print("Miller-Rabin Algorithm for testing whether given number is prime or not.")
+print("Case 1. Non-prime number given.")
 (non_prime, non_a) = get_prime(want_prime=False)
 print("n = {}, a = {}".format(non_prime, non_a))
 primality(non_prime, non_a, printing=True)
 print()
 
 # print line 155: prime
-print("line:155")
+#print("line:155")
+print("Case 2. Prime number given.")
 (prime_n, a) = get_prime()
 print("n = {}, a = {}".format(prime_n, a))
 primality(prime_n, a, printing=True)
@@ -185,7 +189,9 @@ while p == q:
 n = p * q
 pin = (p-1)*(q-1)
 e = 3
-print("line:174")
+
+#print("line:174")
+print("Get public key e which conforms to be relatively prime with \u03A6(n) by using Extended Euclidean Algorithm.")
 while not extend_euclidean(pin, e):
     e += 1
 print()
@@ -194,12 +200,14 @@ print()
 s,t = extend_euclidean(pin, e, printing=False)
 while t < 0:
     t += pin
-print("line:186")
+#print("line:186")
+print("Getting d, also by Extended Euclidean Algorithm.")
 print("d = {}".format(t))
 print()
 
 # line 190, organize well which binary representation
-print("line:190")
+#print("line:190")
+print("Alice's public key, private key, and sources for them.")
 print("p = {}, q = {}, n = {}, e = {}, d = {}".format(p, q, n, e, t))
 print("p = {:032}".format(int(bin(p)[2:])))
 print("q = {:032}".format(int(bin(q)[2:])))
@@ -227,7 +235,8 @@ s2, t2 = extend_euclidean(pin2, e2, printing=False)
 while t2 < 0:
     t2 += pin2
 
-print("line:198")
+#print("line:198")
+print("Trent's public key, private key, and sources for them.")
 print("p = {}, q = {}, n = {}, e = {}, d = {}".format(p2, q2, n2, e2, t2))
 print("p = {:032}".format(int(bin(p2)[2:])))
 print("q = {:032}".format(int(bin(q2)[2:])))
@@ -236,14 +245,6 @@ print("e = {:032}".format(int(bin(e2)[2:])))
 print("d = {:032}".format(int(bin(t2)[2:])))
 print()
 
-# line 222
-
-########################
-#p = 109
-#q = 73
-#n = 8611
-#e = 5
-#d = 1685
 
 # r
 # 1. get binary representation of ' Alice'
@@ -295,22 +296,22 @@ def fast_exponent(a, x, n, printing= False): # a^x mod n
 
 signature = fast_exponent(hr, t2, n2)
 
-# signature #############
-#n2 = 7957
-#e2 = 5
-#t2 = 6221
-
 #line 222
-print("line:222")
-print("r = {}".format(r))
-print("h(r) = {}".format(bin(hr)[2:].rjust(32, '0')))
+#print("line:222")
+
+print("r is concatenation of 1. the string of Alice, 2. n padded with leading 0, 3. Alice's public key e.")
+
+print("r = {}\n".format(r))
+print("h is the one-way hash function.")
+print("h(r) = {}\n".format(bin(hr)[2:].rjust(32, '0')))
 # s should be obtained from h(r) ** d2 (=t2) % n, but it's not as same as the e.g.
-print("s = {}".format(bin(signature)[2:].rjust(32, '0')))
-print()
+print("The signature s is h(r) decrypted with Trent’s private key (using fast exponentiation).")
+print("s = {}\n".format(bin(signature)[2:].rjust(32, '0')))
 
 # line 224
 
-print("line:224")
+#print("line:224")
+print("Decimal representation.")
 print("h(r) = {}, s = {}".format(hr, signature))
 # print("recreation through encryption", fast_exponent(signature, e2, n2))
 print()
@@ -333,23 +334,19 @@ def make_u(k):
 # Choose uk−2, ..., u0 randomly, bit by bit
 u = '1' + make_u(k-1) #+ str(random.randint(0,1))
 
-### THIS PROBLEM HAS ERROR, IF K EQUALS TO 12, U CANNOT BE IN 4096 AND 8191, K MUST BE 13 DETERMINISTICALLY
-### I'll JUST IGNORE THE RANGE
-# make sure u is in the bound
-# while not 4096 <= int(u, 2) <= 8191:
-#     #print(int(u, 2))
-#     u = '1' + make_u(12)
-
 
 u = u.rjust(32, '0')
 
 
 print("line:246")
+print("Alice's authentication to Bob.")
+print("k is binary representation of u, u is random number between 4096 and 8191.")
 print("k = {}, u = {}".format(k, int(u,2)))
 print()
 
 # line 248
-print("line:248")
+#print("line:248")
+print("Binary representation of u.")
 print("u = {}".format(u))
 print()
 
@@ -357,9 +354,11 @@ print()
 hu = one_way_hash(u)
 v = fast_exponent(hu, t, n)
 
-print("line:254")
+#print("line:254")
+print("u, h(u), v = D^RSA(d, h(u)), E^RSA(e, v)")
 print("u = {}, h(u) = {}, v = {}, Ev = {}".format(int(u, 2), hu, v, fast_exponent(v, e, n)))
 print()
 
-print("line:257")
+#print("line:257")
+print("Computation of E(e,v).")
 fast_exponent(v, e, n, printing=True)

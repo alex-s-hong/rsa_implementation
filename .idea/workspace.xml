@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97ead63c-146b-4eef-b284-00063d428e09" name="Default Changelist" comment="" />
+    <list default="true" id="97ead63c-146b-4eef-b284-00063d428e09" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output17.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output18.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output9.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +39,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1U57iG8oiuB3RJ05Ld6N0Sgh1BN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,6 +49,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/SampleOutputs/output2.txt" />
   </component>
   <component name="RunManager">
@@ -72,25 +102,25 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="502" height="801" key="GridCell.Tab.0.bottom" timestamp="1576635610812">
+    <state width="502" height="801" key="GridCell.Tab.0.bottom" timestamp="1584433575108">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="502" height="801" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1576635610812" />
-    <state width="502" height="801" key="GridCell.Tab.0.center" timestamp="1576635610811">
+    <state width="502" height="801" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584433575108" />
+    <state width="502" height="801" key="GridCell.Tab.0.center" timestamp="1584433575107">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="502" height="801" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1576635610811" />
-    <state width="502" height="801" key="GridCell.Tab.0.left" timestamp="1576635610810">
+    <state width="502" height="801" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584433575107" />
+    <state width="502" height="801" key="GridCell.Tab.0.left" timestamp="1584433575107">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="502" height="801" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1576635610810" />
-    <state width="502" height="801" key="GridCell.Tab.0.right" timestamp="1576635610811">
+    <state width="502" height="801" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584433575107" />
+    <state width="502" height="801" key="GridCell.Tab.0.right" timestamp="1584433575108">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="502" height="801" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1576635610811" />
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1576624935499">
+    <state width="502" height="801" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584433575108" />
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1584424071557">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1576624935499" />
+    <state x="397" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1584424071557" />
   </component>
 </project>

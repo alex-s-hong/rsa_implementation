@@ -3,9 +3,9 @@
 
 This project is to build an RSA public/private cryptosystem and use it for creating digital certificates and authentication.
 
-As part of the assignment of Applied Cryptography & Network Security (CSCI-GA 3205-001), line numbers are given to point out which step has been processed for following results.
+This is served as final project assignment of Applied Cryptography & Network Security (CSCI-GA 3205-001).
 
-
+One way function is coarse but sufficient enough for the class requirement.
 
 2. Description for the execution
 
